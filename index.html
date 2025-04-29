@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyChess</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
-    <script src="script.js"></script>
+  <header>MyChess</header>
+
+  <nav>
+    <a href="#">Play</a>
+    <a href="#">Tutorials</a>
+    <a href="#">Leaderboard</a>
+    <a href="#">News</a>
+    <a href="#">Login</a>
+  </nav>
+
+  <div class="main">
+    <div id="board"></div>
+    <div class="sidebar">
+      <h2>Welcome to MyChess</h2>
+      <p>Play chess online, improve your skills, or learn the basics.</p>
+      <button onclick="startNewGame()">Start New Game</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>
+  <script>
+    const game = new Chess();
+    const board = Chessboard('board', {
+      draggable: true,
+      position: 'start',
+      onDrop: function (source, target) {
+        const move = game.move({
+          from: source,
+          to: target,
+          promotion: 'q'
+        });
+
+        if (move === null) return 'snapback';
+      },
+      onSnapEnd: function () {
+        board.position(game.fen());
+      }
+    });
+
+    function startNewGame() {
+      game.reset();
+      board.start();
+    }
+  </script>
 </body>
 </html>

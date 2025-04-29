@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #222;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  nav {
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.5rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  #board {
+    width: 400px;
+  }
+  
+  .sidebar {
+    max-width: 300px;
+  }
+  

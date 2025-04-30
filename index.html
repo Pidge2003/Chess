@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MyChess</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -19,15 +18,43 @@
   </nav>
 
   <div class="main">
-    <div id="board"></div>
-    <div class="sidebar">
-      <h2>Welcome to MyChess</h2>
-      <p>Play chess online, improve your skills, or learn the basics.</p>
-      <button onclick="startNewGame()">Start New Game</button>
-    </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+    <div class="board">
+      <!-- 64 squares -->
+      <!-- Use nested loops in backend or code gen to fill programmatically -->
+      <!-- This version hard-codes the layout -->
+      <!-- Row 1 to 8 (from top to bottom) -->
+      <!-- White is bottom-right, so we alternate accordingly -->
+
+      <!-- You could use emojis or Unicode chess pieces in these divs if you like -->
+
+      <!-- 8 rows -->
+      <!-- Row 8 -->
+      <div class="row">
+        <div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div>
+        <div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div>
+      </div>
+      <!-- Row 7 -->
+      <div class="row">
+        <div class="square white"></div><div class="square black"></div><div class="square white"></div><div class="square black"></div>
+        <div class="square white"></div><div class="square black"></div><div class="square white"></div><div class="square black"></div>
+      </div>
+      <!-- Row 6 -->
+      <div class="row">
+        <div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div>
+        <div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div>
+      </div>
+      <!-- Row 5 -->
+      <div class="row">
+        <div class="square white"></div><div class="square black"></div><div class="square white"></div><div class="square black"></div>
+        <div class="square white"></div><div class="square black"></div><div class="square white"></div><div class="square black"></div>
+      </div>
+      <!-- Row 4 -->
+      <div class="row">
+        <div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div>
+        <div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div>
+      </div>
+      <!-- Row 3 -->
+      <div class="row">
+        <div class="square white"></div><div class="square black"></div><div class="square white"></div><div class="square black"></div>
+        <div class="square white"></div><div class="sq
+

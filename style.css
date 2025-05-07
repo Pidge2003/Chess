@@ -33,13 +33,34 @@ body {
     align-items: start;
     gap: 2rem;
     padding: 2rem;
+    flex-wrap: wrap;
   }
   
-  #board {
-    width: 400px;
+  .board {
+    display: flex;
+    flex-direction: column;
+    border: 4px solid #333;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .square {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .white {
+    background-color: #eee;
+  }
+  
+  .black {
+    background-color: #444;
   }
   
   .sidebar {
     max-width: 300px;
   }
+  
   

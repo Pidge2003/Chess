@@ -1,22 +1,14 @@
-const game = new Chess();
-const board = Chessboard('board', {
-  draggable: true,
-  position: 'start',
-  onDrop: function (source, target) {
-    const move = game.move({
-      from: source,
-      to: target,
-      promotion: 'q'
+document.querySelectorAll('.square').forEach((square, index) => {
+    square.addEventListener('click', () => {
+      clearHighlights();
+      square.classList.add('highlight');
+      console.log(`Square clicked: index ${index}`);
     });
-
-    if (move === null) return 'snapback';
-  },
-  onSnapEnd: function () {
-    board.position(game.fen());
+  });
+  
+  function clearHighlights() {
+    document.querySelectorAll('.square').forEach(square => {
+      square.classList.remove('highlight');
+    });
   }
-});
-
-function startNewGame() {
-  game.reset();
-  board.start();
-}
+  
